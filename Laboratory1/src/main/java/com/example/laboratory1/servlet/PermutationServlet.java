@@ -1,5 +1,6 @@
-package com.example.laboratory1;
+package com.example.laboratory1.servlet;
 import com.example.laboratory1.DAO.DictionaryDAO;
+import com.example.laboratory1.Permutation;
 
 import java.io.*;
 import java.util.Arrays;
@@ -51,7 +52,7 @@ public class PermutationServlet extends HttpServlet {
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) {
-        response.setContentType("application/json");
+        response.setContentType("text/html");
         writeToLogFile(request);
 
         String word = "";
@@ -66,7 +67,7 @@ public class PermutationServlet extends HttpServlet {
 
         Permutation permutation = new Permutation();
         List<String> permutations = permutation.getPermutations(word, size);
-        sendPermutationJSON(response, permutations);
+        sendPermutationText(response, permutations);
     }
 
     private void writeToLogFile(HttpServletRequest request) {
@@ -101,7 +102,7 @@ public class PermutationServlet extends HttpServlet {
         }
     }
 
-    private void sendPermutationJSON(HttpServletResponse response, List<String> permutations) {
+    private void sendPermutationText(HttpServletResponse response, List<String> permutations) {
         try {
             PrintWriter out = response.getWriter();
             for (String permutation: permutations) {
