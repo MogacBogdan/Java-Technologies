@@ -1,4 +1,4 @@
-package com.example.laboratory1.DAO;
+package com.example.laboratory1.utils;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,19 +8,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class DictionaryDAO {
-    private List<String> dictionary;
+public class ResourcesManager {
 
-    public DictionaryDAO() {
-        dictionary = new ArrayList<>();
-        getData();
-    }
-
-    public List<String> getDictionary() {
-        return dictionary;
-    }
-
-    private void getData() {
+    public List<String> getResourceData(String name) {
+        List<String> lines = new ArrayList<>();
         try {
             URL resource = getClass().getClassLoader().getResource("dictionary.txt");
             File file = new File(resource.toURI());
@@ -28,7 +19,7 @@ public class DictionaryDAO {
 
             while (scanner.hasNextLine()) {
                 String data = scanner.nextLine();
-                dictionary.add(data);
+                lines.add(data);
             }
             scanner.close();
         } catch (FileNotFoundException e) {
@@ -37,6 +28,7 @@ public class DictionaryDAO {
         } catch (URISyntaxException e) {
             throw new RuntimeException(e);
         }
+        return lines;
     }
 
 }

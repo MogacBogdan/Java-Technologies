@@ -1,4 +1,5 @@
-package com.example.laboratory1;
+package com.example.laboratory1.models;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,5 +43,4 @@ public class Permutation {
         permute(word, "", size);
         return permutations;
     }
-
 }
