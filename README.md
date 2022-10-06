@@ -14,7 +14,6 @@ Repository for all laboratories from Java Technologies.
 
 :x: Analyze concurrency issues and resource contention, invoking the servlet repeatedly, in an asynchronous manner.
 
-======
 
 # Laboratory 2
 * Compulsory part :heavy_check_mark:
