@@ -13,3 +13,16 @@ Repository for all laboratories from Java Technologies.
     * A log file to store HTTP method, IP address, user-agent, client language and parameters, using *Logger*.
 
 :x: Analyze concurrency issues and resource contention, invoking the servlet repeatedly, in an asynchronous manner.
+
+
+# Laboratory 2
+* Compulsory part :heavy_check_mark:
+   * A page containing a form for introducing a word and a number: **src/main/webapp/index.jsp**
+   * A page describing the response that will be delivered to the client: **src/main/webapp/result.jsp**
+* Homework :heavy_check_mark:
+   * object oriented model: **src/main/java/com/example/laboratory1/models**.
+   * Servlets: **src/main/java/com/example/laboratory1/servlets**.
+   * Resources: **src/main/java/com/example/laboratory1/utils**.
+   * Filters: **src/main/java/com/example/laboratory1/filters**.
+   * web filter that logs all requests received by *input.jsp*: **src/main/java/com/example/laboratory1/filters/LogFilter**.
+   * web filter that will decorate the response by adding a specific prelude and specific coda: **src/main/java/com/example/laboratory1/filters/DecoratorFilter**.
