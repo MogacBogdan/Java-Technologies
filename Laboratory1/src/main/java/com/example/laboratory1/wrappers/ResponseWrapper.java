@@ -1,4 +1,4 @@
-package com.example.laboratory1.utils;
+package com.example.laboratory1.wrappers;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpServletResponseWrapper;

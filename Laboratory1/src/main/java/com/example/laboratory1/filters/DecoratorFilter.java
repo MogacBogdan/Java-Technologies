@@ -1,6 +1,6 @@
 package com.example.laboratory1.filters;
 
-import com.example.laboratory1.utils.ResponseWrapper;
+import com.example.laboratory1.wrappers.ResponseWrapper;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -21,8 +21,14 @@ public class DecoratorFilter implements Filter {
         filterChain.doFilter(servletRequest, wrapper);
 
         String content = wrapper.toString();
-        String response = "<h1>HEADER</h1>";
-        content += "<h1>FOOTER</h1>";
+        String response = "<img src=\"https://media.evo.co.uk/image/upload/v1579014015/evo/2020/01/010-prelude-mk3.jpg\"" +
+                " width=\"700\" height=\"500\" alt=\"Honda Prelude\">";
+
+        content += "<h1>Created by Panzariu Ionut-Adrian</h1>";
+        content += "<img src=\"https://m.media-amazon.com/images/M/MV5BNGQwMWNlYjItYmFmZi00YzZmLTlkMjEtMzFjMzBjMDZiYzY4XkEyXkFqcGdeQXVyNDQ3MjUyMTk@._V1_.jpg\"" +
+                " width=\"700\" height=\"500\" alt=\"CODA\">";
+
+
         response += content;
         PrintWriter out = servletResponse.getWriter();
         out.write(response);
