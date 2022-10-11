@@ -28,9 +28,6 @@
             }
             if (selectedCategory != null ){
                out.println("value=" + selectedCategory);
-               System.out.println("UA BUHAIULE");
-            } else {
-                System.out.println("UA PROSTULE");
             }
         %>
     >
