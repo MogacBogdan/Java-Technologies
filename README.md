@@ -11,9 +11,7 @@ Repository for all laboratories from Java Technologies.
 * Bonus part :heavy_check_mark:
     * Invoke the server from a Desktop application (service-invoker.py)
     * A log file to store HTTP method, IP address, user-agent, client language and parameters, using *Logger*.
-
-:x: Analyze concurrency issues and resource contention, invoking the servlet repeatedly, in an asynchronous manner.
-
+    * Analyze concurrency issues and resource contention, invoking the servlet repeatedly, in an asynchronous manner. (service-invoker.py) (TO BE PRESENTED AT LAB 3)
 
 # Laboratory 2
 * Compulsory part :heavy_check_mark:
@@ -26,3 +24,7 @@ Repository for all laboratories from Java Technologies.
    * Filters: **src/main/java/com/example/laboratory1/filters**.
    * web filter that logs all requests received by *input.jsp*: **src/main/java/com/example/laboratory1/filters/LogFilter**.
    * web filter that will decorate the response by adding a specific prelude and specific coda: **src/main/java/com/example/laboratory1/filters/DecoratorFilter**.
+   * web listener that reads a default category specified as a context init parameter at the application start-up. **src/main/java/com/example/laboratory1/listeners/DefaultCategoryListener**
+   * Create a "hand-made" cookie to store the category selected by the client.
+   
+ :x: Captcha
