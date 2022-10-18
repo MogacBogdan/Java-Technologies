@@ -28,4 +28,4 @@ Repository for all laboratories from Java Technologies.
 * Bonus part :heavy_check_mark:
    * web listener that reads a default category specified as a context init parameter at the application start-up. **src/main/java/com/example/laboratory1/listeners/DefaultCategoryListener**
    * Create a "hand-made" cookie to store the category selected by the client.
-   * Captcha
+   * Captcha ( TO BE PRESENTED AT LAB 4 )
