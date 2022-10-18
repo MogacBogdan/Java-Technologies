@@ -16,7 +16,6 @@ async def create_post_request():
     return 0
 
 
-
 loop = asyncio.get_event_loop()
 loop.run_until_complete(create_post_request())
 loop.close()

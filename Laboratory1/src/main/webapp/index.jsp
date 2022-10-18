@@ -9,7 +9,7 @@
 <h1><%= "Permutations of a word!" %>
 </h1>
 <br/>
-<form action="permutations" method="get">
+<form action="verify" method="get">
     <label for="word">Word : </label><input type="text" id="word" name="word">
     <label for="size">Size : </label><input type="text" id="size" name="size" value="0">
     <label for="category">Category : </label><input type="text" id="category" name="category"
