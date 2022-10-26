@@ -35,6 +35,6 @@
          </tr>
      </c:forEach>
 </table>
-<h1><a href="/Laboratory1_war_exploded/">Back to the form</a></h1>
+<h1><a href="/Laboratory1_war/">Back to the form</a></h1>
 </body>
 </html>

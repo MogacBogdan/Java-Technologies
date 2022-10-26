@@ -1,5 +1,4 @@
 package com.example.laboratory1.servlets;
-
 import javax.imageio.ImageIO;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
@@ -10,7 +9,6 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.Hashtable;
 import java.util.Random;
 
 @WebServlet(name = "captchaServlet", value = "/verify")
@@ -26,18 +24,16 @@ public class CaptchaServlet extends HttpServlet {
         response.setHeader("Cache-Control", "no-cache");
         response.setDateHeader("Expires", 0);
         response.setHeader("Pragma", "no-cache");
-        response.setDateHeader("Max-Age", 0);
 
         BufferedImage image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_RGB);
         Graphics2D graphics2D = image.createGraphics();
-        Hashtable map = new Hashtable();
         Random r = new Random();
         String token = Long.toString(Math.abs(r.nextLong()), 36);
         String ch = token.substring(0, 6);
         Color c = new Color(0.6662f, 0.4569f, 0.3232f);
         GradientPaint gradientPaint = new GradientPaint(30, 30, c, 15, 25, Color.WHITE, true);
         graphics2D.setPaint(gradientPaint);
-        Font font = new Font("Verdana", Font.CENTER_BASELINE, 26);
+        Font font = new Font("Verdana", Font.BOLD, 26);
         graphics2D.setFont(font);
         graphics2D.drawString(ch, 2, 20);
         graphics2D.dispose();
