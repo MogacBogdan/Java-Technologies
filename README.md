@@ -24,7 +24,8 @@ Repository for all laboratories from Java Technologies.
    * Filters: **src/main/java/com/example/laboratory1/filters**.
    * web filter that logs all requests received by *input.jsp*: **src/main/java/com/example/laboratory1/filters/LogFilter**.
    * web filter that will decorate the response by adding a specific prelude and specific coda: **src/main/java/com/example/laboratory1/filters/DecoratorFilter**.
+   
+* Bonus part :heavy_check_mark:
    * web listener that reads a default category specified as a context init parameter at the application start-up. **src/main/java/com/example/laboratory1/listeners/DefaultCategoryListener**
    * Create a "hand-made" cookie to store the category selected by the client.
-   
- :x: Captcha
+   * Captcha ( TO BE PRESENTED AT LAB 4 )
