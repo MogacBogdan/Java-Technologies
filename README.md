@@ -29,3 +29,29 @@ Repository for all laboratories from Java Technologies.
    * web listener that reads a default category specified as a context init parameter at the application start-up. **src/main/java/com/example/laboratory1/listeners/DefaultCategoryListener**
    * Create a "hand-made" cookie to store the category selected by the client.
    * Captcha ( TO BE PRESENTED AT LAB 4 )
+   
+# Laboratory 3
+* Compulsory part :heavy_check_mark:
+   * Relational database in order to store and retrieve data.
+* Homework part :heavy_check_mark:
+   * Create support for managing teams using a **datatable**.
+   * create/update team using **dialog**.
+   * use **navigation-rules**.
+   * internationalize the application.
+   
+# Laboratory 4
+* Compulsory part :heavy_check_mark:
+   * Configure a connection pool and a JDBC resource.
+   * Create a DataSource object.
+* Homework part :heavy_check_mark:
+   * Create the pages using templates.
+* Bonus part :heavy_check_mark:
+   * Create a composite component that describes a dataTable with support for CRUD operations.
+   * Use the components ajax and pool in order to display the number of active sessions.
+   
+# Laboratory 5
+* Compulsory part :heavy_check_mark:
+   * Define the persistence unit using a data source configures.
+* Homework part :heavy_check_mark:
+   * Rewrite the persistence layer of the application.
+   * Create a complete test unit fot the CRUD operations.
