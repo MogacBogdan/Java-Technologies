@@ -51,7 +51,7 @@ Repository for all laboratories from Java Technologies.
    
 # Laboratory 5
 * Compulsory part :heavy_check_mark:
-   * Define the persistence unit using a data source configures.
+   * Define the persistence unit using a data source configured as a JDBC Resource.
 * Homework part :heavy_check_mark:
    * Rewrite the persistence layer of the application.
    * Create a complete test unit fot the CRUD operations.
