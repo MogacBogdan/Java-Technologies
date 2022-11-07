@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> <html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:my="http://xmlns.jcp.org/jsf/composite/components" xmlns:p="http://primefaces.org/ui" xmlns:f="http://xmlns.jcp.org/jsf/core"> <h:head> <title>Cities page</title> </h:head> <f:view>
+    <h:body>
+        <ui:composition template="/WEB-INF/templates/page.xhtml">
+            <ui:define name="header">
+                <ui:include src="../WEB-INF/templates/header.xhtml" />
+            </ui:define>
+
+            <ui:define name="content">
+                <p:menubar>
+                    <p:menuitem>
+                        <p:commandButton value="#{msg.create_city}"
+                                         type="button"
+                                         icon="pi pi-save"
+                                         onclick="PF('addCity').show()"/>
+                    </p:menuitem>
+
+                    <p:menuitem>
+                        <p:commandButton value="#{msg.update_city}"
+                                         type="button"
+                                         icon="pi pi-trash"
+                                         onclick="PF('updateCity').show()"/>
+                    </p:menuitem>
+
+                    <p:menuitem>
+                        <p:commandButton value="#{msg.delete_city}"
+                                         type="button"
+                                         icon="pi pi-trash"
+                                         onclick="PF('deleteCity').show()"/>
+                    </p:menuitem>
+                </p:menubar>
+
+                <h:form id="mainForm">
+                    <my:dataTable id="cityList" dataView="#{citiesView}">
+                        <p:column headerText="Name">
+                            <h:outputText value="#{entity.name}" />
+                        </p:column>
+                    </my:dataTable>
+                </h:form>
+
+                <p:dialog header="Add city" id="addDialog" widgetVar="addCity" minHeight="40" width="350" showEffect="fade" modal="true">
+                    <h:form id="addForm">
+                        <span class="ui-float-label">
+                            <p:inputText id="name" value="#{createCityBean.name}" />
+                            <p:outputLabel for="@previous" value="Name" />
+                        </span><br />
+
+                        <p:commandButton value="Submit"
+                                         action="#{createCityBean.submit}"
+                                         update=":mainForm"
+                                         onclick="PF('addCity').hide()"
+                        >
+                            <f:ajax execute="@form" render="dataTable" />
+                        </p:commandButton>
+                    </h:form>
+                </p:dialog>
+
+                <p:dialog header="Update city" id="updateDialog" widgetVar="updateCity" minHeight="40" width="350" showEffect="fade" modal="true">
+                    <h:form id="updateForm">
+                        <span class="ui-float-label">
+                            <p:inputText id="u_id" value="#{updateCityBean.id}" />
+                            <p:outputLabel for="@previous" value="Id" />
+                        </span><br />
+
+                        <span class="ui-float-label">
+                            <p:inputText id="u_name" value="#{updateCityBean.name}" />
+                            <p:outputLabel for="@previous" value="Name" />
+                        </span><br />
+
+                        <p:commandButton value="Submit"
+                                         action="#{updateCityBean.submit}"
+                                         update=":mainForm"
+                                         onclick="PF('updateCity').hide()"
+                        >
+                        </p:commandButton>
+                    </h:form>
+                </p:dialog>
+
+                <p:dialog header="Delete city" id="deleteDialog" widgetVar="deleteCity" minHeight="40" width="350" showEffect="fade" modal="true">
+                    <h:form id="deleteForm">
+                        <span class="ui-float-label">
+                            <p:inputText id="id" value="#{deleteCityBean.id}" />
+                            <p:outputLabel for="@previous" value="id" />
+                        </span><br />
+
+                        <p:commandButton value="Submit"
+                                         action="#{deleteCityBean.submit}"
+                                         update=":mainForm"
+                                         onclick="PF('deleteCity').hide()"
+                        >
+                            <f:ajax execute="@form" render="dataTable" />
+                        </p:commandButton>
+                    </h:form>
+                </p:dialog>
+            </ui:define>
+
+            <ui:define name="footer">
+                <ui:include src="../WEB-INF/templates/footer.xhtml" />
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</f:view>
+
+</html>

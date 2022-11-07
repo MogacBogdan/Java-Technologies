@@ -1,6 +1,9 @@
 package com.example.laboratory3.beans;
 
 import com.example.laboratory3.dto.TeamDto;
+import com.example.laboratory3.entities.City;
+import com.example.laboratory3.entities.Team;
+import com.example.laboratory3.services.CityService;
 import com.example.laboratory3.services.TeamService;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,6 +21,8 @@ import java.util.Date;
 public class UpdateTeamBean implements Serializable {
     @Inject
     private TeamService teamService;
+    @Inject
+    private CityService cityService;
 
     private int id;
     private String name;
@@ -25,6 +30,7 @@ public class UpdateTeamBean implements Serializable {
     private Date founded;
 
     public void submit() {
-        teamService.updateTeam(new TeamDto(id, name, city, founded));
+        City temp = cityService.getCityByName(city);
+        teamService.updateTeam(id, name, temp, founded);
     }
 }

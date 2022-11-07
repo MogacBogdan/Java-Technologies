@@ -4,18 +4,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 
-<h:body>
+<f:view>
+   <h:head>
+      <title>#{msg['app.name']}</title>
+   </h:head>
 
-    <h:outputLabel value="#{msg.hello}"/>
-    <h:form>
-        <h:panelGrid columns="2">
-            <h:commandButton action="#{languageBean.setLanguage('')}" value="#{msg['language.en']}" />
-            <h:commandButton action="#{languageBean.setLanguage('ro')}" value="#{msg['language.ro']}" />
-        </h:panelGrid>
-    </h:form><br/>
+   <h:body>
+       <ui:insert name="header">
+           <ui:include src="WEB-INF/templates/header.xhtml" />
+       </ui:insert>
 
-    <h:button outcome="toApplication" value="#{msg.go_to_app}" />
-</h:body>
+       <ui:insert name="content">
+       </ui:insert>
+   </h:body>
+</f:view>
 </html>

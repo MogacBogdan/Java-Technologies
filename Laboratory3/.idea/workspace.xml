@@ -10,33 +10,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15064105-2f2a-4817-a3fb-9858e604bc65" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/beans/CreateTeamBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/beans/DeleteTeamBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/beans/LanguageBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/beans/UpdateTeamBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/dao/Dao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/dao/TeamsDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/db/Database.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/dto/TeamDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/entities/Team.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/services/TeamService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/views/CalendarView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/views/InputTextView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/views/TeamsView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/messages_en.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/messages_ro.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/contents.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/dataEdit.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/dataView.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/footer.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/header.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/page.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/teams.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Laboratory1/src/main/java/com/example/laboratory1/servlets/CaptchaServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Laboratory1/src/main/java/com/example/laboratory1/servlets/CaptchaServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Laboratory1/src/main/webapp/result.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Laboratory1/src/main/webapp/result.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Laboratory1/target/Laboratory1-1.0-SNAPSHOT/WEB-INF/classes/com/example/laboratory1/HelloServlet.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/beans/ActiveSessionsBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/beans/CreateCityBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/beans/CreatePlayerBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/beans/DataViewBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/beans/DeleteCityBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/beans/UpdateCityBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/chocosolver/Solver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/dto/CityDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/entities/AbstractEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/entities/City.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/entities/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/entities/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/enums/Position.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/listeners/SessionCounter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/repositories/CityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/repositories/PlayerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/repositories/TeamRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/services/CityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/services/PlayerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/views/AutoCompleteView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/views/CitiesView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/views/PlayersView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/views/SelectIdMenuView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/cities.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/players.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/components/autocomplete.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/components/dataTable.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/laboratory3/repositories/TeamRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Laboratory3_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Laboratory3_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d1136d01-220c-4959-aac7-d8eaaa5014ec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d1136d01-220c-4959-aac7-d8eaaa5014ec.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d1136d01-220c-4959-aac7-d8eaaa5014ec/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d1136d01-220c-4959-aac7-d8eaaa5014ec/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/beans/CreateTeamBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/beans/CreateTeamBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/beans/DeleteTeamBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/beans/DeleteTeamBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/beans/UpdateTeamBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/beans/UpdateTeamBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/dao/Dao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/dao/TeamsDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/entities/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/entities/Team.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/services/TeamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/services/TeamService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/views/TeamsView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/laboratory3/views/TeamsView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/messages_ro.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/messages_ro.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/footer.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/footer.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/header.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/header.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/teams.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/teams.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +71,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="com.haulmont.jpb.JpaEntity" />
-        <option value="Class" />
         <option value="jsf" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -65,7 +90,7 @@
     </option>
     <option name="myId2Visible">
       <map>
-        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
         <entry key="com.haulmont.jpb.jpaPalette" value="false" />
         <entry key="com.haulmont.jpb.jpaStructure" value="false" />
       </map>
@@ -74,7 +99,7 @@
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
-    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_INFO" value="false" />
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
@@ -87,24 +112,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/IPanzariu/OneDrive - ENDAVA/Desktop/Java/Java-Technologies/Laboratory3/src/main/webapp/pages",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/IPanzariu/OneDrive - ENDAVA/Desktop/Java/Java-Technologies/Laboratory3/src/main/webapp/pages&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.maddyhome.idea.vim.ui.VimEmulationConfigurable&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "h2",
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;h2&quot;,
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\IPanzariu\OneDrive - ENDAVA\Desktop\Java\Java-Technologies\Laboratory3\src\main\webapp\pages" />
@@ -117,8 +146,98 @@
       <recent name="C:\Users\IPanzariu\OneDrive - ENDAVA\Desktop\Java\Java-Technologies\Laboratory3\src\main\webapp" />
       <recent name="C:\Users\IPanzariu\OneDrive - ENDAVA\Desktop\Java\Java-Technologies\Laboratory3\src\main\webapp\pages" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.laboratory3.repositories" />
+      <recent name="com.example.laboratory3.services" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.laboratory3.beans" />
+    </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Payara Server.Payara 5.2022.3">
+    <configuration name="TeamRepositoryTest.deleteTeam" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Laboratory3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.laboratory3.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.laboratory3.repositories" />
+      <option name="MAIN_CLASS_NAME" value="com.example.laboratory3.repositories.TeamRepositoryTest" />
+      <option name="METHOD_NAME" value="deleteTeam" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TeamRepositoryTest.getAllTeamsNotReturningNullTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Laboratory3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.laboratory3.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.laboratory3.repositories" />
+      <option name="MAIN_CLASS_NAME" value="com.example.laboratory3.repositories.TeamRepositoryTest" />
+      <option name="METHOD_NAME" value="getAllTeamsNotReturningNullTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TeamRepositoryTest.getAllTeamsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Laboratory3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.laboratory3.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.laboratory3.repositories" />
+      <option name="MAIN_CLASS_NAME" value="com.example.laboratory3.repositories.TeamRepositoryTest" />
+      <option name="METHOD_NAME" value="getAllTeamsTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TeamRepositoryTest.getTeamById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Laboratory3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.laboratory3.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.laboratory3.repositories" />
+      <option name="MAIN_CLASS_NAME" value="com.example.laboratory3.repositories.TeamRepositoryTest" />
+      <option name="METHOD_NAME" value="getTeamById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TeamRepositoryTest.updateTeam" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Laboratory3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.laboratory3.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.laboratory3.repositories" />
+      <option name="MAIN_CLASS_NAME" value="com.example.laboratory3.repositories.TeamRepositoryTest" />
+      <option name="METHOD_NAME" value="updateTeam" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Payara 5.2022.3" type="PayaraServerConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="Payara 5.2022.3" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -138,6 +257,36 @@
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="9009" />
       </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -160,6 +309,15 @@
         </option>
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TeamRepositoryTest.updateTeam" />
+        <item itemvalue="JUnit.TeamRepositoryTest.deleteTeam" />
+        <item itemvalue="JUnit.TeamRepositoryTest.getTeamById" />
+        <item itemvalue="JUnit.TeamRepositoryTest.getAllTeamsTest" />
+        <item itemvalue="JUnit.TeamRepositoryTest.getAllTeamsNotReturningNullTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -173,7 +331,17 @@
       <workItem from="1666594389639" duration="8633000" />
       <workItem from="1666608302856" duration="3790000" />
       <workItem from="1666633805021" duration="12660000" />
-      <workItem from="1666683255166" duration="28150000" />
+      <workItem from="1666683255166" duration="34113000" />
+      <workItem from="1666852282853" duration="1869000" />
+      <workItem from="1666961422920" duration="13987000" />
+      <workItem from="1667115814550" duration="35684000" />
+      <workItem from="1667202293843" duration="12390000" />
+      <workItem from="1667244163360" duration="18468000" />
+      <workItem from="1667374131835" duration="13564000" />
+      <workItem from="1667456344758" duration="139000" />
+      <workItem from="1667456494844" duration="2699000" />
+      <workItem from="1667806947224" duration="6442000" />
+      <workItem from="1667816980436" duration="1028000" />
     </task>
     <servers />
   </component>

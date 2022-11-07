@@ -1,7 +1,8 @@
 package com.example.laboratory3.beans;
 
-import com.example.laboratory3.services.TeamService;
+import com.example.laboratory3.services.PlayerService;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.enterprise.context.SessionScoped;
@@ -11,14 +12,10 @@ import java.io.Serializable;
 
 @Getter
 @Setter
+@NoArgsConstructor
 @Named
 @SessionScoped
-public class DeleteTeamBean implements Serializable {
+public class CreatePlayerBean implements Serializable {
     @Inject
-    private TeamService teamService;
-    private int id;
-
-    public void submit() {
-        teamService.deleteTeam(id);
-    }
+    private PlayerService playerService;
 }

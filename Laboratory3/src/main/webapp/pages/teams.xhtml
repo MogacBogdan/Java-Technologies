@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html
     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
-    xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:p="http://primefaces.org/ui"
-    xmlns:f="http://xmlns.jcp.org/jsf/core">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:my="http://xmlns.jcp.org/jsf/composite/components"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
     <title>Teams page</title>
     <style type="text/css">
@@ -14,6 +17,11 @@
 <f:view>
     <h:body>
         <ui:composition template="/WEB-INF/templates/page.xhtml">
+
+            <ui:define name="header">
+                <ui:include src="../WEB-INF/templates/header.xhtml" />
+            </ui:define>
+
             <ui:define name="content">
                 <p:menubar>
                     <p:menuitem>
@@ -41,23 +49,19 @@
                 </p:menubar>
 
                 <h:form id="mainForm">
-                    <p:dataTable var="team" value="#{teamsView.teams}" id="teamList">
-                        <p:column headerText="Id">
-                            <h:outputText value="#{team.id}" />
-                        </p:column>
-
+                    <my:dataTable id="teamList" dataView="#{teamsView}">
                         <p:column headerText="Name">
-                            <h:outputText value="#{team.name}" />
+                            <h:outputText value="#{entity.name}" />
                         </p:column>
 
                         <p:column headerText="City">
-                            <h:outputText value="#{team.city}" />
+                            <h:outputText value="#{entity.city.name}" />
                         </p:column>
 
                         <p:column headerText="Founded">
-                            <h:outputText value="#{team.founded}" />
+                            <h:outputText value="#{entity.founded}" />
                         </p:column>
-                    </p:dataTable>
+                    </my:dataTable>
                 </h:form>
 
                 <p:dialog header="Add team" id="addDialog" widgetVar="addTeam" minHeight="40" width="350" showEffect="fade" modal="true">
@@ -68,8 +72,10 @@
                         </span><br />
 
                         <span class="ui-float-label">
-                            <p:inputText id="city" value="#{createTeamBean.city}" />
-                            <p:outputLabel for="@previous" value="City" />
+                        <p:selectOneMenu id="option" >
+                            <f:selectItem itemLabel="Choose city" itemValue=""/>
+                            <f:selectItems  value="#{selectIdMenuView.cities}"/>
+                        </p:selectOneMenu>
                         </span><br />
 
                         <div class="field col-12 md:col-4">
@@ -78,7 +84,7 @@
 
                         <p:commandButton value="Submit"
                                          action="#{createTeamBean.submit}"
-                                         update=":mainForm:teamList"
+                                         update=":mainForm"
                                          onclick="PF('addTeam').hide()"
                         >
                             <f:ajax execute="@form" render="dataTable" />
@@ -88,8 +94,9 @@
 
                 <p:dialog header="Update team" widgetVar="updateTeam" minHeight="40" width="350" showEffect="fade" modal="true">
                     <h:form id="updateForm">
+
                         <span class="ui-float-label">
-                            <p:inputText id="u_ud" value="#{updateTeamBean.id}" />
+                            <p:inputText id="u_id" value="#{updateTeamBean.id}" />
                             <p:outputLabel for="@previous" value="Id" />
                         </span><br />
 
@@ -109,7 +116,7 @@
 
                         <p:commandButton value="Submit"
                                          action="#{updateTeamBean.submit}"
-                                         update=":mainForm:teamList"
+                                         update=":mainForm"
                                          onclick="PF('updateTeam').hide()">
                         </p:commandButton>
                     </h:form>

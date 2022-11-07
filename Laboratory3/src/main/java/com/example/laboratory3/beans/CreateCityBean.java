@@ -11,29 +11,22 @@ import lombok.Setter;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.naming.NamingException;
 import java.io.Serializable;
 import java.util.Date;
-import java.util.logging.Logger;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @Named
 @SessionScoped
-public class CreateTeamBean implements Serializable {
-    @Inject
-    private TeamService teamService;
-
+public class CreateCityBean implements Serializable {
     @Inject
     private CityService cityService;
 
     private String name;
-    private String city;
-    private Date founded;
-
 
     public void submit() {
-        City tempCity = cityService.getCityByName(city);
-        teamService.addTeam(new Team(name, tempCity, founded));
+        cityService.addCity(new City(name));
     }
 }

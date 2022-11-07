@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:cc = "http://java.sun.com/jsf/composite"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<f:view>
+    <cc:interface>
+        <cc:attribute name="dataView" type="com.example.laboratory3.beans.DataViewBean"/>
+    </cc:interface>
+
+    <cc:implementation>
+        <p:dataTable id="dataTable"
+                     value="#{cc.attrs.dataView.entities}"
+                     var="entity"
+                     rowKey="#{entity.id}"
+                     selection="#{cc.attrs.dataView.selectedEntity}"
+                     selectionMode="single">
+
+            <p:column headerText="Id">
+                <h:outputText value="#{entity.id}" />
+            </p:column>
+
+            <cc:insertChildren />
+        </p:dataTable>
+
+        <h1 class="text-center">
+            <h:outputText id="txt_count" value="Sessions active : #{activeSessionsBean.count}"/>
+        </h1>
+
+        <p:poll interval="3" listener="#{activeSessionsBean.checkSessionCounter}" update="txt_count" />
+    </cc:implementation>
+</f:view>
+</html>

@@ -1,38 +1,37 @@
 package com.example.laboratory3.services;
 
-import com.example.laboratory3.dao.TeamsDao;
-import com.example.laboratory3.dto.TeamDto;
+import com.example.laboratory3.entities.City;
 import com.example.laboratory3.entities.Team;
+import com.example.laboratory3.repositories.TeamRepository;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 import javax.inject.Named;
-import javax.naming.NamingException;
+import java.util.Date;
 import java.util.List;
 
 @Named
+@NoArgsConstructor
 @ApplicationScoped
 public class TeamService {
-    TeamsDao teamsDao;
-
-    public TeamService() {
-        try {
-            teamsDao = new TeamsDao();
-        } catch (NamingException e) {
-            throw new RuntimeException(e);
-        }
-    }
+    @Inject
+    @Getter @Setter
+    private TeamRepository teamRepository;
 
     public List<Team> getAllTeams() {
-        return teamsDao.getAllTeams();
+        return teamRepository.getAllTeams();
     }
 
-    public void addTeam(TeamDto team) {
-        teamsDao.createTeam(team);
+    public void addTeam(Team team) {
+        teamRepository.addTeam(team);
     }
 
-    public void updateTeam(TeamDto team) {
-        teamsDao.updateTeam(team);
-    }
+    public void deleteTeam(int id) { teamRepository.deleteTeam(id); }
 
-    public void removeTeam(int id) { teamsDao.deleteTeam(id); }
+    public void updateTeam(int id, String name, City city, Date founded) {
+        teamRepository.updateTeam(id, name, city, founded);
+    }
 }

@@ -1,6 +1,6 @@
 package com.example.laboratory3.beans;
 
-import com.example.laboratory3.services.TeamService;
+import com.example.laboratory3.services.CityService;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,12 +13,12 @@ import java.io.Serializable;
 @Setter
 @Named
 @SessionScoped
-public class DeleteTeamBean implements Serializable {
+public class DeleteCityBean implements Serializable {
     @Inject
-    private TeamService teamService;
+    private CityService cityService;
     private int id;
 
     public void submit() {
-        teamService.deleteTeam(id);
+        cityService.deleteCity(id);
     }
 }
