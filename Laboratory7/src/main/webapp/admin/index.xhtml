@@ -1,0 +1,113 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<f:view contentType="text/html;charset=UTF-8" encoding="UTF-8">
+    <h:head>
+        <title>Admin page</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js" type="text/javascript"></script>
+        <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js' type="text/javascript"></script>
+    </h:head>
+
+    <div class="card">
+        <p:menubar>
+            <p:menuitem>
+                <p:button outcome="/index" value="Home" />
+            </p:menuitem>
+
+            <p:menuitem>
+                <p:button outcome="/author/index" value="Author" />
+            </p:menuitem>
+
+            <p:menuitem>
+                <p:button outcome="/reviewer/index" value="Reviewer" />
+            </p:menuitem>
+        </p:menubar>
+    </div>
+
+    <div class="card">
+        <h:form id="viewUsersForm">
+            <p:dataTable var="user" value="#{viewUsersBean.users}" id="usersDatatable">
+                <p:column headerText="Username">
+                    <h:outputText value="#{user.username}" />
+                </p:column>
+
+                <p:column headerText="Password">
+                    <h:outputText value="#{user.password}" />
+                </p:column>
+            </p:dataTable>
+        </h:form>
+    </div>
+
+
+    <div class="card">
+        <h:form id="timeframeForm">
+            <h1>Specify timeframe</h1>
+
+            <h:panelGroup id="timeframes">
+                <h2>Current begin hour : <h:outputText value="#{timeFrameStoreBean.beginHour}" /></h2>
+                <h2>Current end hour : <h:outputText value="#{timeFrameStoreBean.endHour}" /></h2>
+            </h:panelGroup>
+
+            <h5>Begin time</h5>
+            <p:selectOneMenu id="begin" value="#{timeFrameBean.beginHour}" appendTo="@this">
+                <f:selectItem itemLabel="05:00" itemValue="5"/>
+                <f:selectItem itemLabel="06:00" itemValue="6"/>
+                <f:selectItem itemLabel="07:00" itemValue="7"/>
+                <f:selectItem itemLabel="08:00" itemValue="8"/>
+                <f:selectItem itemLabel="09:00" itemValue="9"/>
+                <f:selectItem itemLabel="10:00" itemValue="10"/>
+                <f:selectItem itemLabel="11:00" itemValue="11"/>
+                <f:selectItem itemLabel="12:00" itemValue="12"/>
+                <f:selectItem itemLabel="13:00" itemValue="13"/>
+                <f:selectItem itemLabel="14:00" itemValue="14"/>
+            </p:selectOneMenu>
+
+            <h5>End time</h5>
+            <p:selectOneMenu id="end" value="#{timeFrameBean.endHour}" appendTo="@this">
+                <f:selectItem itemLabel="15:00" itemValue="15"/>
+                <f:selectItem itemLabel="16:00" itemValue="16"/>
+                <f:selectItem itemLabel="17:00" itemValue="17"/>
+                <f:selectItem itemLabel="18:00" itemValue="18"/>
+                <f:selectItem itemLabel="19:00" itemValue="19"/>
+                <f:selectItem itemLabel="20:00" itemValue="20"/>
+                <f:selectItem itemLabel="21:00" itemValue="21"/>
+                <f:selectItem itemLabel="22:00" itemValue="22"/>
+                <f:selectItem itemLabel="23:00" itemValue="23"/>
+                <f:selectItem itemLabel="24:00" itemValue="24"/>
+            </p:selectOneMenu><br/><br/>
+            <p:commandButton value="Set timeframe" action="#{timeFrameBean.save}" update="timeframes"/>
+        </h:form>
+    </div>
+
+    <div class="card">
+        <h1>Add a new user</h1>
+        <h:form id="registerForm">
+            <h5>Username</h5>
+            <p:inputText value="#{registerUserBean.username}"/>
+
+            <h5>Password</h5>
+            <p:inputText value="#{registerUserBean.password}"/>
+
+            <h5>Role</h5>
+            <p:selectOneMenu id="option" value="#{registerUserBean.role}" appendTo="@this">
+                <f:selectItem itemLabel="Admin" itemValue="admin"/>
+                <f:selectItem itemLabel="Author" itemValue="author"/>
+                <f:selectItem itemLabel="Reviewer" itemValue="reviewer"/>
+            </p:selectOneMenu>
+            <br/><br/>
+
+            <p:commandButton value="Register" action="#{registerUserBean.register}" update="viewUsersForm:usersDatatable"/>
+        </h:form>
+    </div>
+
+    <br/>
+    <div class="card">
+        <h:form>
+            <p:commandButton action="#{authBackingBean.logout}" value="Logout" />
+        </h:form>
+    </div>
+
+</f:view>
+</html>
